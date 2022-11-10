@@ -16,28 +16,37 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.container h1 {
+.container .initialScreen h1 {
   margin-bottom: 0.1em;
   font-size: 3em;
 }
-.container h3 {
+.container .initialScreen h3 {
   margin-bottom: 1.5em;
 }
-.container .form {
+.container .initialScreen .form {
   display: inline-block;
 }
-.container .form #cepInput {
+.container .initialScreen .form #cepInput {
   -moz-appearance: textfield;
   outline: none;
   padding: 0.2em;
 }
-.container .form input::-webkit-outer-spin-button,
-.container .form input::-webkit-inner-spin-button {
+.container .initialScreen .form input::-webkit-outer-spin-button,
+.container .initialScreen .form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.container .form button {
+.container .initialScreen .form button {
   display: block;
   margin: 0 auto;
   margin-top: 2em;
   padding: 0.5em;
+}
+.container .searchingScreen {
+  display: none;
+}
+.container .searchingScreen h3 {
+  transform: translateY(3em);
+}
+.container .searchingScreen img {
+  width: 16em;
 }/*# sourceMappingURL=main.css.map */

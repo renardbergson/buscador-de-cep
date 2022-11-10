@@ -9,17 +9,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Consulta de CEP</h1>
+        <div class="initialScreen">
+            <h1>Consulta de CEP</h1>
+    
+            <h3>Digite o cep que deseja consultar</h3>
+    
+            <form class="form">
+                <label>
+                    CEP:
+                    <input id="cepInput" type="number">
+                    <button id="searchBtn">Consultar</button>
+                </label>
+            </form>
+        </div>
 
-        <h3>Digite o cep que deseja consultar</h3>
+        <div class="searchingScreen">
+            <!-- some code -->
+            <h3>Buscando...</h3>
+            <img src="img/spinner.gif" alt="spiner gif">
+        </div>
 
-        <form class="form">
-            <label>
-                CEP:
-                <input id="cepInput" type="number">
-                <button id="searchBtn">Consultar</button>
-            </label>
-        </form>
+        <div class="resultScreen">
+            <!-- some code -->
+        </div>
     </div>
     
     <script src="js/main.js"></script>
