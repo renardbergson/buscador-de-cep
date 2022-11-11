@@ -9,12 +9,32 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+@-webkit-keyframes flashing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .container {
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.container .initialScreen {
+  position: relative;
 }
 .container .initialScreen h1 {
   margin-bottom: 0.1em;
@@ -40,6 +60,22 @@ body {
   margin: 0 auto;
   margin-top: 2em;
   padding: 0.5em;
+}
+.container .initialScreen .form .toast {
+  color: red;
+  display: block;
+  margin-top: 1em;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 300ms;
+}
+.container .initialScreen .form .toast.visible {
+  opacity: 1;
+  -webkit-animation: flashing infinite 200ms ease 200ms;
+          animation: flashing infinite 200ms ease 200ms;
 }
 .container .searchingScreen {
   display: none;

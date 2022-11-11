@@ -1,4 +1,5 @@
 @import 'base.scss';
+@import 'animations.scss';
 
 .container {
     //border: 1px solid red;
@@ -9,6 +10,8 @@
     transform: translate(-50%, -50%);
 
     .initialScreen {
+        position: relative;
+
         h1 {
             margin-bottom: 0.1em;
             font-size: 3em;
@@ -31,12 +34,29 @@
             input::-webkit-inner-spin-button {
                 -webkit-appearance: none;
             }
-    
+            
             button {
                 display: block;
                 margin: 0 auto;
                 margin-top: 2em;
                 padding: 0.5em;
+            }
+
+            .toast {
+                color: red;
+                display: block;
+                margin-top: 1em;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: 300ms;
+
+                &.visible {
+                    opacity: 1;
+                    animation: flashing infinite 200ms ease 200ms;
+                }
             }
         }
     }
