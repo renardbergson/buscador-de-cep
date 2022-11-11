@@ -8,7 +8,9 @@ const $toast = document.querySelector('.toast')
 $searchBtn.onclick = e => {
     e.preventDefault()
 
-    if ($cepInput.length !== 8) {
+    const value = $cepInput.value.length
+
+    if (value !== 8) {
         $toast.classList.add('visible')
 
         setTimeout(() => {
