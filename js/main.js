@@ -39,7 +39,7 @@ $searchBtn.onclick = e => {
 }
 
 function dataShow(data) { 
-    if (data) {
+    if (data.cep != undefined) {
         setTimeout(() => {
             $searchingScreen.style.display = 'none'
             $resultScreen.style.display = 'block'
@@ -62,6 +62,8 @@ function dataShow(data) {
             $cepOutputs.item(4).innerHTML = `IBGE: ${data.ibge}` 
             $cepOutputs.item(5).innerHTML = `DDD: ${data.ddd}`
         }, 3000)
+    } else {
+        error()
     }
 }
 
