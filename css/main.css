@@ -50,6 +50,8 @@ body {
   -moz-appearance: textfield;
   outline: none;
   padding: 0.2em;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 .container .initialScreen .form input::-webkit-outer-spin-button,
 .container .initialScreen .form input::-webkit-inner-spin-button {
@@ -77,6 +79,15 @@ body {
   -webkit-animation: flashing infinite 200ms ease 200ms;
           animation: flashing infinite 200ms ease 200ms;
 }
+.container .resultScreen {
+  display: none;
+}
+.container .resultScreen #resultReturn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  margin-top: 2em;
+}
 .container .searchingScreen {
   display: none;
 }
@@ -92,8 +103,9 @@ body {
 .container .errorScreen img {
   width: 10em;
   margin: 1em 0;
+  border-radius: 20%;
 }
-.container .errorScreen #returnBtn {
+.container .errorScreen #errorReturn {
   display: block;
   margin: 0 auto;
   padding: 0.5em;

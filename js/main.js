@@ -1,14 +1,17 @@
 const $initialScreen = document.querySelector('.initialScreen')
-const $searchingScreen = document.querySelector('.searchingScreen')
-const $resultScreen = document.querySelector('.resultScreen')
-
 const $cepInput = document.querySelector('#cepInput')
 const $searchBtn = document.querySelector('#searchBtn')
 const $toast = document.querySelector('.toast')
 
+const $searchingScreen = document.querySelector('.searchingScreen')
+
+const $resultScreen = document.querySelector('.resultScreen')
 const $cepOutputs = document.querySelectorAll('.cepOutput')
+const $resultReturn = document.querySelector('#resultReturn')
+
+
 const $errorScreen = document.querySelector('.errorScreen')
-const $returnBtn = document.querySelector('#returnBtn')
+const $errorReturn = document.querySelector('#errorReturn')
 
 $searchBtn.onclick = e => {
     e.preventDefault()
@@ -29,7 +32,7 @@ $searchBtn.onclick = e => {
     $initialScreen.style.display = 'none'
     $searchingScreen.style.display = 'block'
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    fetch(`https://viacep.com.br/s/${cep}/json/`)
         .then(response => response.json())
         .then(dataShow)
         .catch(error)
@@ -57,10 +60,7 @@ function dataShow(data) {
             }
 
             $cepOutputs.item(4).innerHTML = `IBGE: ${data.ibge}` 
-            $cepOutputs.item(5).innerHTML = `DDD: ${data.ddd}`  
-
-
-            console.log(data)
+            $cepOutputs.item(5).innerHTML = `DDD: ${data.ddd}`
         }, 3000)
     }
 }
@@ -72,7 +72,12 @@ function error() {
     }, 3000)
 }
 
-$returnBtn.onclick = () => {
+$resultReturn.onclick = () => {
+    $resultScreen.style.display = 'none'
+    $initialScreen.style.display = 'block'
+}
+
+$errorReturn.onclick = () => {
     $errorScreen.style.display = 'none'
     $initialScreen.style.display = 'block'
 }

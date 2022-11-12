@@ -28,6 +28,8 @@
                 -moz-appearance: textfield;
                 outline: none;
                 padding: 0.2em;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1em;
             }
     
             input::-webkit-outer-spin-button,
@@ -61,6 +63,17 @@
         }
     }
 
+    .resultScreen {
+        display: none;
+
+        #resultReturn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.5em;
+            margin-top: 2em;
+        }
+    }
+
     .searchingScreen {
         display: none;
 
@@ -79,9 +92,10 @@
         img {
             width: 10em;
             margin: 1em 0;
+            border-radius: 20%;
         }
 
-        #returnBtn {
+        #errorReturn {
             display: block;
             margin: 0 auto;
             padding: 0.5em;
