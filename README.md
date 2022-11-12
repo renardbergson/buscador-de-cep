@@ -25,7 +25,9 @@ Meu objetivo ao desenvolver o projeto foi colocar em prática os conceitos por t
   •	Um navegador em ambiente desktop ou mobile
   
 ### Preview
-Este é um pequeno preview da aplicação <br>
+Este é um pequeno preview da aplicação <br> 
+<br>
+![](https://github.com/renardbergson/buscador-de-cep/blob/main/img/gif%20preview.gif)
 
 ### Link
   •	[Buscador de CEP](https://buscador-de-cep-rb.netlify.app/) 
