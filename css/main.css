@@ -64,7 +64,9 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 2em;
-  padding: 0.5em;
+  padding: 0.4em;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 .container .initialScreen .form .toast {
   color: red;
@@ -85,11 +87,13 @@ body {
 .container .resultScreen {
   display: none;
 }
-.container .resultScreen #resultReturn {
+.container .resultScreen button {
   display: block;
   margin: 0 auto;
   padding: 0.5em;
   margin-top: 2em;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 .container .searchingScreen {
   display: none;
@@ -108,8 +112,10 @@ body {
   margin: 1em 0;
   border-radius: 20%;
 }
-.container .errorScreen #errorReturn {
+.container .errorScreen button {
   display: block;
   margin: 0 auto;
   padding: 0.5em;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

@@ -44,7 +44,9 @@
                 display: block;
                 margin: 0 auto;
                 margin-top: 2em;
-                padding: 0.5em;
+                padding: 0.4em;
+                font-family: 'Poppins', sans-serif;
+                cursor: pointer;
             }
 
             .toast {
@@ -69,11 +71,13 @@
     .resultScreen {
         display: none;
 
-        #resultReturn {
+        button {
             display: block;
             margin: 0 auto;
             padding: 0.5em;
             margin-top: 2em;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
         }
     }
 
@@ -98,10 +102,12 @@
             border-radius: 20%;
         }
 
-        #errorReturn {
+        button {
             display: block;
             margin: 0 auto;
             padding: 0.5em;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
         }
     }
 }
