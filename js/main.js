@@ -32,7 +32,7 @@ $searchBtn.onclick = e => {
     $initialScreen.style.display = 'none'
     $searchingScreen.style.display = 'block'
 
-    fetch(`https://viacep.com.br/s/${cep}/json/`)
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(response => response.json())
         .then(dataShow)
         .catch(error)
@@ -75,6 +75,7 @@ function error() {
 $resultReturn.onclick = () => {
     $resultScreen.style.display = 'none'
     $initialScreen.style.display = 'block'
+    $cepInput.value = ''
 }
 
 $errorReturn.onclick = () => {

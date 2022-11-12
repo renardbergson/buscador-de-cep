@@ -35,6 +35,7 @@ body {
 }
 .container .initialScreen {
   position: relative;
+  text-align: center;
 }
 .container .initialScreen h1 {
   margin-bottom: 0.1em;
@@ -52,6 +53,8 @@ body {
   padding: 0.2em;
   font-family: "Poppins", sans-serif;
   font-size: 1em;
+  width: 6em;
+  text-align: center;
 }
 .container .initialScreen .form input::-webkit-outer-spin-button,
 .container .initialScreen .form input::-webkit-inner-spin-button {
