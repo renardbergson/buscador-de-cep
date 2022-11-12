@@ -28,7 +28,7 @@ Meu objetivo ao desenvolver o projeto foi colocar em prática os conceitos por t
 Este é um pequeno preview da aplicação <br>
 
 ### Link
-  •	[Buscador de CEP]() 
+  •	[Buscador de CEP](https://buscador-de-cep-rb.netlify.app/) 
 
 ### Autor
   •	Renard Bergson 🤓 <br>
