@@ -69,6 +69,7 @@ function error() {
     setTimeout(() => {
         $searchingScreen.style.display = 'none'
         $errorScreen.style.display = 'block'
+        $cepInput.value = ''
     }, 3000)
 }
 

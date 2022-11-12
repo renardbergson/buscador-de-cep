@@ -2,7 +2,6 @@
 @import 'animations.scss';
 
 .container {
-    //border: 1px solid red;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -13,9 +12,20 @@
         position: relative;
         text-align: center;
 
-        h1 {
-            margin-bottom: 0.1em;
-            font-size: 3em;
+        div {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                margin-bottom: 0.1em;
+                font-size: 3em;
+            }
+
+            img {
+                margin-left: 0.5em;
+                width: 3em;
+                height: 3em;
+            }
         }
     
         h3 {
