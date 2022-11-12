@@ -1,16 +1,20 @@
 const $initialScreen = document.querySelector('.initialScreen')
 const $searchingScreen = document.querySelector('.searchingScreen')
+const $resultScreen = document.querySelector('.resultScreen')
 
 const $cepInput = document.querySelector('#cepInput')
 const $searchBtn = document.querySelector('#searchBtn')
 const $toast = document.querySelector('.toast')
 
+const $cepOutputs = document.querySelectorAll('.cepOutput')
+
 $searchBtn.onclick = e => {
     e.preventDefault()
 
-    const value = $cepInput.value.length
+    const cep = $cepInput.value
+    const cepLength = $cepInput.value.length
 
-    if (value !== 8) {
+    if (cepLength !== 8) {
         $toast.classList.add('visible')
 
         setTimeout(() => {
@@ -22,4 +26,43 @@ $searchBtn.onclick = e => {
 
     $initialScreen.style.display = 'none'
     $searchingScreen.style.display = 'block'
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(dataShow)
+        .catch(error)
+}
+
+function dataShow(data) { 
+    if (data) {
+        setTimeout(() => {
+            $searchingScreen.style.display = 'none'
+            $resultScreen.style.display = 'block'
+
+            $cepOutputs.item(0).innerHTML = `CEP: ${data.cep}` 
+            $cepOutputs.item(1).innerHTML = `Localidade: ${data.localidade} - ${data.uf}`
+
+            if (data.bairro = ' ') {
+                $cepOutputs.item(2).innerHTML = 'Bairro: Centro'
+            } else {
+                $cepOutputs.item(2).innerHTML = `Bairro: ${data.bairro}`
+            }
+
+            if (data.logradouro = ' ') {
+                $cepOutputs.item(3).innerHTML = ' '
+            } else {
+                $cepOutputs.item(3).innerHTML = data.logradouro
+            }
+
+            $cepOutputs.item(4).innerHTML = `IBGE: ${data.ibge}` 
+            $cepOutputs.item(5).innerHTML = `DDD: ${data.ddd}`  
+
+
+            console.log(data)
+        }, 3000)
+    }
+}
+
+function error() {
+    $searchingScreen.style.display = 'none'
 }
