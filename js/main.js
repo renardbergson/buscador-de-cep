@@ -7,6 +7,8 @@ const $searchBtn = document.querySelector('#searchBtn')
 const $toast = document.querySelector('.toast')
 
 const $cepOutputs = document.querySelectorAll('.cepOutput')
+const $errorScreen = document.querySelector('.errorScreen')
+const $returnBtn = document.querySelector('#returnBtn')
 
 $searchBtn.onclick = e => {
     e.preventDefault()
@@ -64,5 +66,13 @@ function dataShow(data) {
 }
 
 function error() {
-    $searchingScreen.style.display = 'none'
+    setTimeout(() => {
+        $searchingScreen.style.display = 'none'
+        $errorScreen.style.display = 'block'
+    }, 3000)
+}
+
+$returnBtn.onclick = () => {
+    $errorScreen.style.display = 'none'
+    $initialScreen.style.display = 'block'
 }

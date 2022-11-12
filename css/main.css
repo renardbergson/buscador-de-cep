@@ -85,4 +85,16 @@ body {
 }
 .container .searchingScreen img {
   width: 16em;
+}
+.container .errorScreen {
+  display: none;
+}
+.container .errorScreen img {
+  width: 10em;
+  margin: 1em 0;
+}
+.container .errorScreen #returnBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
 }/*# sourceMappingURL=main.css.map */

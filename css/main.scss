@@ -72,4 +72,19 @@
             width: 16em;
         }
     }
+
+    .errorScreen {
+        display: none;
+
+        img {
+            width: 10em;
+            margin: 1em 0;
+        }
+
+        #returnBtn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.5em;
+        }
+    }
 }
