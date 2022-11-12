@@ -1,7 +1,7 @@
 # Buscador de CEP
 
 ### Descrição
-Esta é uma aplicação que consulta o endereço atrelado a um CEP digitado pelo usuário, que retorna uma mensagem com todos os dados e que, se ocorrer algum erro, informa ao usuário que a consulta não foi bem sucedida, sugerindo que ele tente novamente.
+Esta é uma aplicação que consulta o endereço atrelado a um CEP digitado pelo usuário, que retorna uma mensagem com os principais dados e que, se ocorrer algum erro, informa ao usuário que a consulta não foi bem sucedida, sugerindo que ele tente novamente.
 
 ### Objetivos
 Meu objetivo ao desenvolver o projeto foi colocar em prática os conceitos por trás do consumo de uma API, além de exercitar outros tópicos que fizeram parte dos meus estudos recentemente.
