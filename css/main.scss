@@ -1,5 +1,6 @@
 @import 'base.scss';
 @import 'animations.scss';
+@import 'breakpoints.scss';
 
 .container {
     text-align: center;
@@ -15,16 +16,41 @@
         div {
             display: flex;
             align-items: center;
+            position: relative;
 
             h1 {
                 margin-bottom: 0.1em;
                 font-size: 3em;
+
+                @include devices (tablet) {
+                    font-size: 2.6em;
+                }
             }
 
             img {
                 margin-left: 0.5em;
-                width: 3em;
-                height: 3em;
+                width: 2.5em;
+                height: 2.5em;
+                
+                // =========================
+                @include devices (iPadAir) {
+                    position: absolute;
+                    top: 60%;
+                    right: 100px;
+                }
+                @include devices (tablet) {
+                    top: 20%;
+                    right: -13%;
+                }
+                @include devices (mobileL) {
+                    top: 59%;
+                    right: -5%;
+                    width: 2.2em;
+                    height: 2.2em;
+                }
+                @include devices (mobileM) {
+                    right: -6%;
+                } 
             }
         }
     
@@ -56,6 +82,7 @@
                 margin-top: 2em;
                 padding: 0.4em;
                 font-family: 'Poppins', sans-serif;
+                font-size: 0.9em;
                 cursor: pointer;
             }
 
@@ -87,6 +114,7 @@
             padding: 0.5em;
             margin-top: 2em;
             font-family: 'Poppins', sans-serif;
+            font-size: 0.9em;
             cursor: pointer;
         }
     }
@@ -117,6 +145,7 @@
             margin: 0 auto;
             padding: 0.5em;
             font-family: 'Poppins', sans-serif;
+            font-size: 0.9em;
             cursor: pointer;
         }
     }
