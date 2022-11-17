@@ -15,8 +15,7 @@ const $errorReturn = document.querySelector('#errorReturn')
 
 $searchBtn.onclick = e => {
     e.preventDefault()
-
-    const cep = $cepInput.value
+ 
     const cepLength = $cepInput.value.length
 
     if (cepLength !== 8) {
@@ -29,13 +28,25 @@ $searchBtn.onclick = e => {
         return
     }
 
+    request()
+}
+
+function request() {
     $initialScreen.style.display = 'none'
     $searchingScreen.style.display = 'block'
+    
+    const cep = $cepInput.value
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-        .then(dataShow)
-        .catch(error)
+    .then(getResponse)
+    .then(dataShow)
+    .catch(error)
+}
+
+function getResponse(response) {
+    if (response.status === 200) {
+        return response.json()
+    }
 }
 
 function dataShow(data) { 
